@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::view('/registrarticket','RegistrarTicket/index')->name('Registrar');
 Route::view('/Refacciones','Refacciones/refacciones')->name('Refacciones');
+
+Route::view('/sesion', 'sesion/index');
