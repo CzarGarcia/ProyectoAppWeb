@@ -11,6 +11,8 @@
         <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="{{asset('assets/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+    {{-- <link rel="stylesheet" href="{{asset('styles.css')}}"> --}}
+
     
 
     <style>
@@ -26,6 +28,193 @@
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
+      }
+
+      .social-icons {
+	      display: flex;
+	      gap: 1.5rem;
+      }
+
+      .social-icons span {
+	      border-radius: 50%;
+	      width: 3rem;
+	      height: 3rem;
+
+	      display: flex;
+	      align-items: center;
+	      justify-content: center;
+      }
+
+      .social-icons span i {
+        color: #fff;
+        font-size: 1.2rem;
+      }
+
+      .facebook {
+        background-color: #3b5998;
+      }
+
+      .twitter {
+        background-color: #00acee;
+      }
+
+      .youtube {
+        background-color: #c4302b;
+      }
+
+      .pinterest {
+        background-color: #c8232c;
+      }
+
+      .instagram {
+        background: linear-gradient(
+          #405de6,
+          #833ab4,
+          #c13584,
+          #e1306c,
+          #fd1d1d,
+          #f56040,
+          #fcaf45
+        );
+      }
+
+      .footer {
+        background-color: var(--primary-color);
+      }
+
+      .container-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        padding: 3rem;
+      }
+
+      .menu-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) 30rem;
+        gap: 3rem;
+        justify-items: center;
+      }
+
+      .title-footer {
+        font-weight: 600;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+
+      /* .newsletter{
+        display:inline-block;
+        flex-direction: column;
+        float: right;
+        width: 200px;
+        height: 256px;
+        
+      } */
+      .contact-info,
+      .information,
+      .my-account,
+      .newsletter
+       {
+        display:inline-block;
+        flex-direction: column;
+        margin-left: 
+        gap: 2rem;
+        width: 200px;
+        height: 256px;
+      }
+
+      .contact-info ul,
+      .information ul,
+      .my-account ul {
+        display: inline-block;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .contact-info ul li,
+      .information ul li,
+      .my-account ul li {
+        list-style: none;
+        color: #fff;
+        font-size: 10px;
+        font-weight: 300;
+      }
+
+      .information ul li a,
+      .my-account ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 300;
+      }
+
+      .information ul li a:hover,
+      .my-account ul li a:hover {
+        color: var(--dark-color);
+      }
+
+      .social-icons {
+        /* width: 200px; */
+        display: flex;
+        gap: 1.5rem;
+      }
+      .content p {
+        font-size: 10px;
+        color: #fff;
+        font-weight: 300;
+      }
+
+      .content input {
+        outline: none;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #d2b495;
+        cursor: pointer;
+        padding: 0.5rem 0 1.2rem;
+        color: var(--dark-color);
+        display: block;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        width: 100%;
+        font-family: inherit;
+      }
+
+      .content input::-webkit-input-placeholder {
+        color: #eee;
+      }
+
+      .content button {
+        border: none;
+        background-color: #000;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 1rem 3rem;
+        border-radius: 2rem;
+        font-size: 10px;
+        font-family: inherit;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .content button:hover {
+        background-color: var(--background-color);
+        color: var(--primary-color);
+      }
+
+      .copyright {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2rem;
+
+        border-top: 1px solid #d2b495;
+      }
+
+      .copyright p {
+        font-weight: 400;
+        font-size: 10px;
+      }
+      .container_py-5{
+        background: rgb(175, 106, 16);
       }
     </style>
 
@@ -206,18 +395,10 @@
 
 </main>
 
-<footer class="text-muted py-5">
-  <div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
-  </div>
-</footer>
+@include('/footer.footer');
 
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    
 
       
   </body>
