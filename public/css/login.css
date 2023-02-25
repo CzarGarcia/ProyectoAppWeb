@@ -1,8 +1,14 @@
 :root {
-    --primary-color: #c7a17a;
+    /* --primary-color: #c7a17a; */
     --background-color: #f9f5f0;
     --dark-color: #151515;
 }
+.footer{
+    background-color:#777777;
+}
+.container-footer {
+    margin-bottom: -24px;
+  }
 
 *{
     margin: 0;

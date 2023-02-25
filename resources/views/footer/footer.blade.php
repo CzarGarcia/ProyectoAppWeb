@@ -80,21 +80,36 @@
                     <li>EmaiL: feenekInc@support.com</li>
                 </ul>
                 <div class="social-icons">
+                    <button class="botonF"><a href="http://facebook.com">
                     <span class="facebook">
                         <i class="fa-brands fa-facebook-f"></i>
                     </span>
+                    </a></button>
+                    
+                    <button class="botonT"><a href="http://twitter.com">
                     <span class="twitter">
                         <i class="fa-brands fa-twitter"></i>
                     </span>
+                    </a></button>
+                    
+                    <button class="botonY"><a href="http://youtube.com">
                     <span class="youtube">
                         <i class="fa-brands fa-youtube"></i>
                     </span>
+                    </a></button>
+                    
+                    <button class="botonP"><a href="http://pinterest.com">
                     <span class="pinterest">
                         <i class="fa-brands fa-pinterest-p"></i>
                     </span>
+                    </a></button>
+                    
+                    <button class="botonI"><a href="http://instagram.com">
                     <span class="instagram">
                         <i class="fa-brands fa-instagram"></i>
-                    </span>
+                    </span>    
+                    </a></button>
+                    
                 </div>
             </div>
 
