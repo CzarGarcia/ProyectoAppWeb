@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('solicitud_tickets', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('tipo');
-            $table->string('password');
-            $table->string('estado');
-            $table->rememberToken();
+            $table->string('titulo');
+            $table->string('descripcion');
+            $table->string('direccion');
+            $table->string('zona');
+            $table->string('estado');//el truco aqui va a ser que el estado sea aceptado o declinado
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('solicitud_tickets');
     }
 };

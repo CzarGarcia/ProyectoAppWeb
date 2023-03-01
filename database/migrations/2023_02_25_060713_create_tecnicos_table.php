@@ -18,8 +18,10 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->string('puesto');
-            $table->string('domicilio');
-            $table->binary('foto');
+            $table->string('domicilio')->nullable();
+            $table->binary('foto')->nullable();
+            $table->string('zona')->nullable();
+            $table->string('estado');
             $table->foreignId('id_usuario');
             $table->foreign('id_usuario')->references('id')->on('users');
             $table->timestamps();

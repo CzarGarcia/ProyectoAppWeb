@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->char('cantidad');
-            $table->text('descripcion');
-            $table->foreignId('codigo');
-            $table->foreign('codigo')->references('id')->on('users');
+            $table->text('descripcion')->nullable();
+            $table->string('estado');
+            $table->string('codigo');
             $table->timestamps();
         });
     }

@@ -5,15 +5,24 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class sparePart extends Model
+class ticket extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'nombre',
-        'cantidad',
+        'titulo',
         'descripcion',
+        'direccion',
+        'zona',
+        'tecnicoAsignado',
         'estado',
-        'codigo',
     ];
+
+
+    public function tecnico(){
+        return $this->belongsTo(tecnico::class);
+    }
+
 }
+
+

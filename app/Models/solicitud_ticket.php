@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class sparePart extends Model
+class solicitud_ticket extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'nombre',
-        'cantidad',
+        'titulo',
         'descripcion',
+        'direccion',
+        'zona',
         'estado',
-        'codigo',
     ];
 }
