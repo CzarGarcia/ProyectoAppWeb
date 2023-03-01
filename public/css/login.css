@@ -1,8 +1,14 @@
 :root {
-    --primary-color: #c7a17a;
+    /* --primary-color: #c7a17a; */
     --background-color: #f9f5f0;
     --dark-color: #151515;
 }
+.footer{
+    background-color:#777777;
+}
+.container-footer {
+    margin-bottom: -24px;
+  }
 
 *{
     margin: 0;
@@ -13,7 +19,8 @@
 }
 
 body{
-    background-color: #5947ff;
+    /* background-color: #5947ff; */
+    background-image: url(../img/fondo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -41,7 +48,7 @@ main{
     justify-content: center;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 229, 194, 0.164);
+    background-color: rgba(0, 109, 241, 0.205);
     border-radius: 15px;
 
 }
@@ -70,8 +77,8 @@ main{
 
 .caja__trasera button{
     padding: 10px 40px;
-    /* border: 2px solid #c7a17a; */
-    background: #5947ff;
+    border: 2px solid #000cadc2;
+    /* background: #5947ff; */
     font-size: 14px;
     background: transparent;
     font-weight: 600;
@@ -84,7 +91,7 @@ main{
 
 .caja__trasera button:hover{
     /* background: #c7a17a; */
-    background: #5947ff;
+    background: #003de64f;
     color: black;
 }
 
@@ -133,7 +140,7 @@ main{
     margin-top: 40px;
     border: none;
     font-size: 14px;
-    background: #5947ff;
+    background: #003de64f;
     font-weight: 600;
     cursor: pointer;
     color: black;
