@@ -1,16 +1,16 @@
 :root {
     /* --primary-color: #c7a17a; */
     --background-color: #f9f5f0;
-    --dark-color: #151515;
+    /* --dark-color: #151515; */
 }
-.footer{
+/* .footer{
     background-color:#777777;
-}
+} */
 .container-footer {
     margin-bottom: -24px;
   }
 
-*{
+main{
     margin: 0;
     padding: 0;
     box-sizing: border-box;

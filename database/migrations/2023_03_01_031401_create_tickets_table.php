@@ -16,12 +16,16 @@ return new class extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->string('descripcion');
+            $table->text('descripcion');
             $table->string('direccion');
             $table->string('zona');
-            $table->foreignId('tecnicoAsignado')->nullable();
-            $table->string('estado');
+            $table->string('estado');//activo, en proceso o inactivo
+            $table->string('correo');
+            $table->string('telefono');
+            $table->foreignId('tecnicoAsignado')->nullable();//puede ser nulo ya que el tecnico aun no puede estar asignado
             $table->foreign('tecnicoAsignado')->references('id')->on('tecnicos');
+            $table->foreignId('id_solicitudTicket')->nullable();//puede ser nula ya que no todo ticket ingresado vendra de un cliente
+            $table->foreign('id_solicitudTicket')->references('id')->on('solicitud_tickets');
             $table->timestamps();
         });
     }

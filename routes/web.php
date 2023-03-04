@@ -14,10 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('home');
 });
 
-Route::view('/registrarticket','RegistrarTicket/index')->name('Registrar');
-Route::view('/Refacciones','Refacciones/refacciones')->name('Refacciones');
+Route::view('/registrarticket','RegistrarTicket/index')->name('registrar');
+Route::view('/inicio','inicio/index')->name('home');
 
 Route::view('/sesion', 'sesion/index');
+Route::view('/solicitud', 'crudSolicitudTicket/index');
+Route::view('/solicitarTicket', 'crudSolicitudTicket/index'); 

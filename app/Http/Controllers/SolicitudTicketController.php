@@ -22,9 +22,21 @@ class SolicitudTicketController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        $sT = new solicitud_ticket();
+        $sT->titulo = $request->input('titulo');
+        $sT->descripcion = $request->input('descripcion');
+        $sT->direccion = $request->input('titulo');
+        $sT->zona = $request->input('zona');
+        $sT->estado = 'Activo';
+        $sT->correo = $request->input('email');
+        $sT->telefono = $request->input('telefono');
+
+        $sT->save();
+
+        return view('inicio/index')->with('exito', 'Se ha registrado su solicitud, revise su correo para la confirmacion');
     }
 
     /**

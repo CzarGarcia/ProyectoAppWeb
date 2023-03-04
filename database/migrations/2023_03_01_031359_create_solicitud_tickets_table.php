@@ -16,10 +16,12 @@ return new class extends Migration
         Schema::create('solicitud_tickets', function (Blueprint $table) {
             $table->id();
             $table->string('titulo');
-            $table->string('descripcion');
+            $table->text('descripcion');
             $table->string('direccion');
             $table->string('zona');
             $table->string('estado');//el truco aqui va a ser que el estado sea aceptado o declinado
+            $table->string('correo');
+            $table->string('telefono');
             $table->timestamps();
         });
     }

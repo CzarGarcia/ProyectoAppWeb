@@ -66,7 +66,7 @@
 
 </footer> --}}
 
-<footer class="footer">
+<footer class="footer" style="">
     <div class="container container-footer">
         <div class="menu-footer">
             <div class="contact-info">
