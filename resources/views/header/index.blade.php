@@ -19,10 +19,24 @@
           <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
+
+          <li class="admin">
+            <a class="nav-link" href=""> Mostrar </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=""> Crear </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=""> Editar </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=""> Borrar </a>
+          </li>
+
+          
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class=" btnsesion"><a class="abtn" href="{{asset('sesion')}}">Search</a></button>
         </form>
       </div>
     </div>
