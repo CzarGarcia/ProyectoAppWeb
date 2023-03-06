@@ -60,11 +60,11 @@
     </section>
 
     <section >
-        <div class="div1">
-          <p>ahhhhhhhhhhhhhhhhh</p>
-          <h1>aaaaaaaaaaa</h1>
-          <h2>ahhhhhhhhhh</h2>
-        </div>
+        {{-- <div class="div1">
+          <h1>REVIEWS</h1>
+          <h2>Comentarios</h2>
+        </div> --}}
+        @include('inicio/reviews')
     </section>
 
     <section >
@@ -78,69 +78,12 @@
   <section >
     <div class="div3">
       <p>ahhhhhhhhhhhhhhhhh</p>
-      <h1>aaaaaaaaaaa</h1>
+      <h1>COBERTURA</h1>
       <h2>ahhhhhhhhhh</h2>
     </div>
 </section>
-  
-    {{-- <div class="album py-5 bg-light">
-      <div class="container1">
-  
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div class="col1">
-            <div class="card1 shadow-sm">
-              
-              <button> <a href="http://"> <img class="img_pro" src="img/instalacion.jpg" alt=""> </a></button>
-              
-              <div class="card-body">
-                <p class="card-text">INSTALACIÓN</p>
-              </div>
-            </div>
-          </div>
-          <div class="col3">
-            <div class="card1 shadow-sm">
-              <button> <a href="http://"> <img class="img_pro" src="img/entrega_a_pisos_posteriores.jpg" alt=""> </a></button>
-              <div class="card-body">
-                <p class="card-text">ENTREGA A PISOS POSTERIORES</p>
-              </div>
-            </div>
-          </div>
-          <div class="col3">
-            <div class="card1 shadow-sm">
-              <button> <a href="http://"> <img class="img_pro" src="img/desempaque.jpg" alt=""> </a></button>
-              <div class="card-body">
-                <p class="card-text">DESEMPAQUE</p>
-              </div>
-            </div>
-          </div>
-          <div class="col1">
-            <div class="card1 shadow-sm">
-              <button> <a href="http://"> <img class="img_pro" src="img/entrega_personalizada.jpg" alt=""> </a></button>
-              <div class="card-body">
-                <p class="card-text">ENTREGA PERSONALIZADA</p>
-              </div>
-            </div>
-          </div>
-          <div class="col2">
-            <div class="card1 shadow-sm">
-              <button> <a href="http://"> <img class="img_pro" src="img/garantias_extendidas.jpg" alt=""> </a></button>
-              <div class="card-body">
-                <p class="card-text">GARANTÍAS EXTENDIDAS</p>
-              </div>
-            </div>
-          </div>
-          <div class="col5">
-            <div class="card1 shadow-sm">
-              <button> <a href="http://"> <img class="img_pro" src="img/mantenimiento_preventivo.jpg" alt=""> </a></button>
-              <div class="card-body">
-                <p class="card-text">MANTENIMIENTO PREVENTIVO</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> --}}
-  
+
+
   </main>
     
 @endsection

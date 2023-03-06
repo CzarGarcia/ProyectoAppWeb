@@ -238,6 +238,7 @@
 
 	  .div1{
 		background-color: black;
+		margin-top: 5px;
 		border-radius: 10px;
 		margin-left: 5px;
 	  }
@@ -258,7 +259,10 @@
 		background-color: black;
 		margin-left: 5px;
 		display: flex;
-	  }
+		align-items: center;
+		
+	  justify-content: center;
+		}
 
 	  /* #sec{
 		background-color: black;
