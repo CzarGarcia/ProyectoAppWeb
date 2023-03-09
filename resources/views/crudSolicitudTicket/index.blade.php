@@ -27,14 +27,14 @@
 @section('content')
 
 <div id="contenedor-form-solicitud">
-    <form action="{{}}">
+    <form action="{{asset('/registrarSolicitud')}}" method="POST">
         @csrf
         <h2>Solicitud de servicio</h2>
         <p>Completa los campos para poder crear una solicitud de servicio</p>
         <br>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="direccion" class="form-label">Telefono</label>
@@ -45,12 +45,12 @@
             <input type="text" id="direccion" name="direccion"  class="form-control" required>
         </div>
         <div class="mb-3">
-            <label for="direccion" class="form-label">Zona <div id="clarito">(elija la zona donde se encuentre su casa, o la mas cercana)</div></label>
-            <select name="direccion" id="direccion"  class="form-control" required>
+            <label for="zona" class="form-label">Zona <div id="clarito">(elija la zona donde se encuentre su casa, o la mas cercana)</div></label>
+            <select name="zona" id="zona"  class="form-control" required>
                 <option value="">Selecciona una opcion</option>
-                <option value="0">San Juan de Dios</option>
-                <option value="1">Las aguilas</option>
-                <option value="2">Tlajomulco</option>
+                <option value="San Juan de Dios">San Juan de Dios</option>
+                <option value="Tonala">Tonala</option>
+                <option value="Tlajomulco">Tlajomulco</option>
             </select>
         </div>
         <div class="mb-3">

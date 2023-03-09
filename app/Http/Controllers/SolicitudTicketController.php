@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\solicitud_ticket;
+use App\Models\tecnico;
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\DB;
 
 class SolicitudTicketController extends Controller
 {
@@ -28,7 +31,7 @@ class SolicitudTicketController extends Controller
         $sT = new solicitud_ticket();
         $sT->titulo = $request->input('titulo');
         $sT->descripcion = $request->input('descripcion');
-        $sT->direccion = $request->input('titulo');
+        $sT->direccion = $request->input('direccion');
         $sT->zona = $request->input('zona');
         $sT->estado = 'Activo';
         $sT->correo = $request->input('email');
@@ -45,7 +48,7 @@ class SolicitudTicketController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request = null)
     {
         //
     }
@@ -56,9 +59,31 @@ class SolicitudTicketController extends Controller
      * @param  \App\Models\solicitud_ticket  $solicitud_ticket
      * @return \Illuminate\Http\Response
      */
-    public function show(solicitud_ticket $solicitud_ticket)
+    public function show($id)
     {
         //
+        $ticket = solicitud_ticket::find($id);
+        $tecnicos = tecnico::where('zona', $ticket->zona)->where('estado', 'Activo')->get();
+        // dd(json_decode($tecnicos));
+        $tecnicos = json_decode($tecnicos);
+        usort($tecnicos,function ($a, $b) {
+            if ($a == '0000-00-00')
+                return 1;
+
+            if ($b == '0000-00-00')
+                return -1;
+
+            if ($a == $b)
+                return 0;
+
+            return ($a < $b) ? -1 : 1;
+        });
+        // dd($tecnicos);
+
+        return view('privado/asignarTecnico/index')->with('ticket', solicitud_ticket::find($id))
+                                             ->with('tecnicos',$tecnicos);
+        
+
     }
 
     /**
@@ -93,5 +118,16 @@ class SolicitudTicketController extends Controller
     public function destroy(solicitud_ticket $solicitud_ticket)
     {
         //
+    }
+
+
+
+    //estas funciones no pertenecen a la solicitud de tickets, son funciones que me ayudan a generar las tablas de el dashboard
+    //las pasare a otro controlador
+    //...talvez xd
+    public function alltables(){
+        $tables = DB::select('show tables');
+
+        dd($tables);
     }
 }

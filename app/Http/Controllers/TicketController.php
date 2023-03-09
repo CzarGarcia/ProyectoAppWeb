@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\solicitud_ticket;
+use App\Models\tecnico;
 use App\Models\ticket;
 use Illuminate\Http\Request;
 
@@ -15,6 +17,8 @@ class TicketController extends Controller
     public function index()
     {
         //
+        return view('privado/tickets/index')->with('NoSoliTickets', ticket::where('estado', 'Activo')->get())
+                                             ->with('SolicitudTickets', solicitud_ticket::where('estado', 'Activo')->get());
     }
 
     /**
@@ -44,9 +48,29 @@ class TicketController extends Controller
      * @param  \App\Models\ticket  $ticket
      * @return \Illuminate\Http\Response
      */
-    public function show(ticket $ticket)
-    {
-        //
+    public function show($id)
+    {   
+        $ticket = ticket::find($id);
+        $tecnicos = tecnico::where('zona', $ticket->zona)->where('estado', 'Activo')->get();
+        // dd(json_decode($tecnicos));
+        $tecnicos = json_decode($tecnicos);
+        usort($tecnicos,function ($a, $b) {
+            if ($a == '0000-00-00')
+                return 1;
+
+            if ($b == '0000-00-00')
+                return -1;
+
+            if ($a == $b)
+                return 0;
+
+            return ($a < $b) ? -1 : 1;
+        });
+        // dd($tecnicos);
+
+        return view('privado//asignarTecnico/index')->with('ticket', ticket::find($id))
+                                             ->with('tecnicos',$tecnicos);
+
     }
 
     /**
@@ -58,6 +82,7 @@ class TicketController extends Controller
     public function edit(ticket $ticket)
     {
         //
+
     }
 
     /**
