@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->char('cantidad');
             $table->text('descripcion')->nullable();
+            $table->string('imagenes')->nullable();
             $table->string('estado');
             $table->string('codigo');
             $table->timestamps();
