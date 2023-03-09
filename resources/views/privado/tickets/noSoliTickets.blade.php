@@ -1,3 +1,4 @@
+@if (count($NoSoliTickets) != 0)
 <br>
 <h1>Tickets</h1>
 <div class="flex justify-items-center max-w-xs">
@@ -42,3 +43,7 @@
     </div>
     <div class="flex-1"></div>
 </div>
+@else
+<br><br>
+    <h1>No hay tickets</h1>
+@endif
