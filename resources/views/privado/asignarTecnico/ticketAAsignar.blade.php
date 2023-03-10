@@ -1,4 +1,5 @@
-<div class="flex justify-items-center max-w-xs">
+<section class="home-section">
+    <div class="flex justify-items-center max-w-xs">
     <div class=" flex-1">
         <div></div>
     </div>

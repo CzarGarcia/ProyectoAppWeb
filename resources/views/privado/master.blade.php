@@ -16,8 +16,6 @@
         @yield('content')
     </div>
 
-    @yield('footer')
+    @include('privado/footer')
 
     @yield('scriptsAbajo')
-</body>
-</html>
