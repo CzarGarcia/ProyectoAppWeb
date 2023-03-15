@@ -20,13 +20,13 @@
         </thead>
         <tbody>
             @foreach ($tecnicos as $tecnico)
-                <tr>
-                    <td class="border px-1 py-1">{{$tecnico->nombre}}</td>
-                    <td class="border px-1 py-1">{{$tecnico->apellido}}</td>
-                    <td class="border px-1 py-1">{{$tecnico->puesto}}</td>
-                    <td class="border px-1 py-1">{{$tecnico->zona}}</td>
-                    <td class="border px-1 py-1">{{$tecnico->estado}}</td>
-                    <td class="border px-1 py-1">{{$tecnico->id_usuario}}</td>
+            <tr class="table-info">
+                    <td>{{$tecnico->nombre}}</td>
+                    <td >{{$tecnico->apellido}}</td>
+                    <td >{{$tecnico->puesto}}</td>
+                    <td >{{$tecnico->zona}}</td>
+                    <td >{{$tecnico->estado}}</td>
+                    <td >{{$tecnico->id_usuario}}</td>
                     <td href="" class="">Seleccionar</td>
                 </tr>
             @endforeach

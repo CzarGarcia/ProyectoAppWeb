@@ -20,7 +20,8 @@ Route::get('/', function () {
 });
 
 Route::view('/registrarticket','RegistrarTicket/index')->name('registrar');
-Route::view('/inicio','inicio/index')->name('home');
+Route::view('/inicio','inicio/index')->name('inicio');
+Route::view('/solicitudes','formulario/index')->name('solicitudes');
 
 Route::view('/sesion', 'sesion/index');
 Route::view('/solicitud', 'crudSolicitudTicket/index');

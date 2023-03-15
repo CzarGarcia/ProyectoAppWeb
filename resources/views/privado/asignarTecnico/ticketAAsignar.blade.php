@@ -19,7 +19,7 @@
                 <th class="bg-blue-100 border text-left px-1 py-1">Actualizado el</th>
             </thead>
             <tbody>
-                <tr>
+                <tr class="table-info">
                     <td class="border px-1 py-1">{{$ticket->titulo}}</td>
                     <td class="border px-1 py-1">{{$ticket->descripcion}}</td>
                     <td class="border px-1 py-1">{{$ticket->direccion}}</td>
